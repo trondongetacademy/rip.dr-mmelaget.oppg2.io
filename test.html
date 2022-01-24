@@ -7,20 +7,22 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="index.html">Index</a>
+    <br><br>
     <div id="output"></div>
     <br>
     <div onclick="adjectiv(this.innerHTML)">sulten</div>
-    
+    <div onclick="adjectiv(this.innerHTML)">grei</div>
     <script>
 
 
         var verdi = '';
-        var verdi2;
-        var verdi3;
+        var verdi2 = '';
+        var verdi3 = '';
 
 
         function adjectiv(parameter) {
-            verdi += parameter;
+            verdi = parameter;
             console.log(verdi);
             arbeid(); 
         }
