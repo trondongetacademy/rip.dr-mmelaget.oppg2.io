@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T1BTS</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Yo</h1>
-    <div>Det var en gang en <span id="output"></span>  skole som het Get Academy.
-         Der var det mange <span id=output1></span> studenter som hadde lyst til å lære seg å kode.<br>
-          Det var en _______ sammensetning av mennesker som begynte på denne skolen.
+    <div id="output"></div>
+    <br>
+    <div onclick="adjectiv(this.innerHTML)">sulten</div>
+    
+    <script>
+
+
+        var verdi = '';
+        var verdi2;
+        var verdi3;
+
+
+        function adjectiv(parameter) {
+            verdi += parameter;
+            console.log(verdi);
+            arbeid(); 
+        }
+        arbeid();
+        function arbeid(){
+            document.getElementById('output').innerHTML = `
+            <div> Det var en gang en ${verdi} skole som het Get Academy.
+         Der var det mange ${verdi2} studenter som hadde lyst til å lære seg å kode.<br>
+          Det var en ${verdi3} sammensetning av mennesker som begynte på denne skolen.
            For ikke å snakke om de ______lærerne. De var både _____ og _____, men også litt ________.<br>
 
         Den vi hører mest er Therese. Hu er ______ og temmelig ______. 
@@ -23,13 +42,9 @@
          vi har også det ________ team 3, det _______ team 2 og sist men ikke minst oss, 
          det ______ team 1. <br>Hele gjengen er rett og slett ganske _______.
         </div>
-
-        <script>
-            var pompøs = 'pompøs';
-            var teit = 'teit';
-            var verdi = '';
-            let html = document.getElementById('output1');
-        </script>
-    
+            
+            `;
+        }
+    </script>
 </body>
 </html>
