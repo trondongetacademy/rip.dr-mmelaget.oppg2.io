@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Yo</h1>
-    <div>Det var en gang en <span id="output"></span>  skole som het Get Academy.
-         Der var det mange <span id=output1></span> studenter som hadde lyst til å lære seg å kode.<br>
+    <div>Det var en gang en <span id="a1"></span>  skole som het Get Academy.
+         Der var det mange <span id="a2"></span> studenter som hadde lyst til å lære seg å kode.<br>
           Det var en _______ sammensetning av mennesker som begynte på denne skolen.
            For ikke å snakke om de ______lærerne. De var både _____ og _____, men også litt ________.<br>
 
@@ -24,11 +24,16 @@
          det ______ team 1. <br>Hele gjengen er rett og slett ganske _______.
         </div>
         <a href="test.html">Test</a>
+
+        <div onclick="trykk(this, 'a1', 'a2', 'a3')">Majo</div>
+        <div onclick="trykk(this, 'a1', 'a2','a3')">Saus</div>
+
         <script>
-            var pompøs = 'pompøs';
-            var teit = 'teit';
-            var verdi = '';
-            let html = document.getElementById('output1');
+            var blank = document.getElementById('a1').innerHTML;
+            function trykk(Hodepine){
+                document.getElementById('a1','a2').innerHTML = Hodepine;
+                
+            }
         </script>
     
 </body>

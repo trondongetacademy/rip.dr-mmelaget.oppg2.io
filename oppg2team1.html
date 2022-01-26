@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">Index</a>
+    <br><br>
+    <div id="output"></div>
+    <br>
+    <div onclick="chooseAdjective(this.innerHTML)">sulten</div>
+    <div onclick="chooseAdjective(this.innerHTML)">grei</div>
+    <script>
+
+
+        var verdi0 = '____';
+        var verdi1 = '____';
+        var verdi2 = '____';
+        var verdi3 = '____';
+
+        let counter = 0;
+
+
+
+
+        
+        arbeid();
+        function arbeid(){
+            document.getElementById('output').innerHTML = `
+            <div> Det var en gang en ${verdi0} skole som het Get Academy.
+         Der var det mange ${verdi2} studenter som hadde lyst til å lære seg å kode.<br>
+          Det var en _____ sammensetning av mennesker som begynte på denne skolen.
+           For ikke å snakke om de ______lærerne. De var både _____ og _____, men også litt ________.<br>
+
+        Den vi hører mest er Therese. Hu er ______ og temmelig ______. 
+        Hu prøver å lære alle de _______ studentene å bli _______ til å kode.
+         Den ______ Erlend hjelper også til.<br> Han er veldig ______ til å være så ung.
+          Linn er også en del av lærergjengen vi har her på den _____ første modulen.
+           Mange vil nok beskrive hu som litt ____, og veldig ________. <br>
+        
+        På Modul 1 er det fem ____ team. Team 5 som er ganske ________, ________ team 4,
+         vi har også det ________ team 3, det _______ team 2 og sist men ikke minst oss, 
+         det ______ team 1. <br>Hele gjengen er rett og slett ganske _______.
+        </div>
+            
+            `;
+        }
+
+        function chooseAdjective(klikketAdjektiv) {
+           // console.log(" chooseAdjective starter ", klikketAdjektiv);
+
+            //safeway   - en if per variabel
+            // if(counter == 0){
+            //     verdi = klikketAdjektiv;
+            // }
+            // if(counter == 1){
+            //     verdi1 == klikketAdjektiv;
+            // }
+
+
+            //hardway - linn anbefaler IKKE - aner ikke hva hun gjør xD
+            let currentVariableToPutValueIn = makeVarName();
+            window[currentVariableToPutValueIn]= klikketAdjektiv;
+            //console.log(currentVariableToPutValueIn, " <- supertest ", verdi0, " verdi0")
+            counter++;
+
+            
+
+            arbeid();
+        }
+
+        function makeVarName(){
+            let test = `verdi${counter}`;
+            return test;
+        }
+        // function chooseAdjective(parameter) {
+        //     if (verdi2 != '____') {
+        //         verdi2 = parameter;
+        //     }
+        //     arbeid(); 
+        // }
+    </script>
+</body>
+</html>
